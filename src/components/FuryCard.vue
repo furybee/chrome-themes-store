@@ -1,8 +1,8 @@
 <template>
   <a :href="props.item.link" target="_blank">
-    <div class="flex rounded-2xl bg-stone-100 hover:bg-stone-200" :class="`flex-${mode}`">
+    <div class="flex rounded-2xl bg-stone-100 hover:bg-stone-200" :class="mode === 'row' ? 'xl:flex-row flex-col' : 'flex-col'">
       <div class="flex-0 p-4 pb-0">
-        <img :src="props.item.miniature" class="rounded-xl" :class="mode === 'row' ? 'max-w-xl' : 'w-full'" alt="FuryDim Miniature">
+        <img :src="props.item.miniature" class="rounded-xl" :class="mode === 'row' ? 'xl:max-w-xl' : 'w-full'" alt="FuryDim Miniature">
       </div>
       <div class="flex flex-1 mt-2" :class="mode === 'row' ? 'p-4' : 'pb-2'">
         <img v-if="mode === 'col'" :src="props.item.icon" class="rounded-xl h-20 pl-1" alt="FuryDim Logo">

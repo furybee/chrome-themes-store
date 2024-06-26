@@ -1,23 +1,23 @@
 <template>
-  <a href="https://github.com/furybee" target="_blank" class="text-yellow-600 hover:text-yellow-700 absolute top-5 right-5 "><GithubIcon class="inline h-12"/></a>
+  <a href="https://github.com/furybee" target="_blank" class="text-yellow-600 hover:text-yellow-700 absolute top-5 right-5 "><GithubIcon class="inline h-8 xl:h-12"/></a>
 
-  <h1 class="text-5xl font-semibold text-center my-20">Fury<span class="text-yellow-500">Bee</span> Web Store</h1>
+  <h1 class="text-3xl xl:text-5xl font-semibold text-center mt-20 mb-8 xl:mb-20">Fury<span class="text-yellow-500">Bee</span> Web Store</h1>
 
-  <div class="container mx-auto pb-44">
-    <h1 class="text-4xl font-semibold text-center my-20">Explore Our themes</h1>
+  <div class="container mx-auto pb-44 p-2 xl:p-0">
+    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 xl:my-20">Explore Our themes</h2>
 
     <div class="grid  lg:grid-cols-3 2xl:grid-cols-4 gap-6">
       <FuryCard v-for="(theme, index) in themes" :key="index" :item="theme"></FuryCard>
     </div>
 
 
-    <h1 class="text-4xl font-semibold text-center mt-32 mb-20">Discover our extensions</h1>
+    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 mt-32 xl:my-20">Discover our extensions</h2>
       <div>
         <FuryCard v-for="(extension, index) in extensions" :key="index" :item="extension" mode="row"></FuryCard>
       </div>
   </div>
 
-  <footer class="bg-stone-100 text-center py-4">
+  <footer class="bg-stone-100 text-center py-4 mt-20">
     <p class="text-sm">
       © {{ (new Date()).getFullYear() }} FuryBee.
       All rights reserved.
@@ -59,13 +59,13 @@ const themes = [
     miniature: 'themes/FuryValentine/miniature.png',
     icon: 'themes/FuryValentine/icon.png',
   },
-  {
-    name: "FuryRetro",
-    description: "Indulge in a sweet blend of playful charm and delightful design.",
-    link: "https://chromewebstore.google.com/detail/_________THEME_ID_________",
-    miniature: "themes/FuryRetro/miniature.png",
-    icon: "themes/FuryRetro/icon.png",
-  }
+  // {
+  //   name: "FuryRetro",
+  //   description: "Indulge in a sweet blend of playful charm and delightful design.",
+  //   link: "https://chromewebstore.google.com/detail/_________THEME_ID_________",
+  //   miniature: "themes/FuryRetro/miniature.png",
+  //   icon: "themes/FuryRetro/icon.png",
+  // }
 ];
 
 const extensions = [
