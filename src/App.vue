@@ -1,16 +1,34 @@
 <template>
-  <h1 class="text-4xl font-semibold text-center my-20">Themes developed by FuryBee</h1>
+  <a href="https://github.com/furybee" target="_blank" class="text-yellow-600 hover:text-yellow-700 absolute top-5 right-5 "><GithubIcon class="inline h-12"/></a>
 
-  <div class="container mx-auto">
+  <h1 class="text-5xl font-semibold text-center my-20">Fury<span class="text-yellow-500">Bee</span> Web Store</h1>
+
+  <div class="container mx-auto pb-44">
+    <h1 class="text-4xl font-semibold text-center my-20">Explore Our themes</h1>
+
     <div class="grid  lg:grid-cols-3 2xl:grid-cols-4 gap-6">
-      <theme-card v-for="(theme, index) in themes" :key="index" :theme="theme"></theme-card>
+      <FuryCard v-for="(theme, index) in themes" :key="index" :item="theme"></FuryCard>
     </div>
+
+
+    <h1 class="text-4xl font-semibold text-center mt-32 mb-20">Discover our extensions</h1>
+      <div>
+        <FuryCard v-for="(extension, index) in extensions" :key="index" :item="extension" mode="row"></FuryCard>
+      </div>
   </div>
+
+  <footer class="bg-stone-100 text-center py-4">
+    <p class="text-sm">
+      © {{ (new Date()).getFullYear() }} FuryBee.
+      All rights reserved.
+    </p>
+  </footer>
 </template>
 
 <style scoped></style>
 <script setup lang="ts">
-import ThemeCard from './components/ThemeCard.vue';
+import FuryCard from './components/FuryCard.vue';
+import GithubIcon from "./icons/GithubIcon.vue";
 
 const themes = [
   {
@@ -42,11 +60,34 @@ const themes = [
     icon: 'themes/FuryValentine/icon.png',
   },
   {
-    name: 'FuryCupcake',
-    description: 'Indulge in a sweet blend of playful charm and delightful design.',
-    link: 'https://chromewebstore.google.com/detail/furycupcake/ckngjhpmfmaceefpidpciedmoglldcom',
-    miniature: 'themes/FuryCupcake/miniature.png',
-    icon: 'themes/FuryCupcake/icon.png',
+    name: "FuryRetro",
+    description: "Indulge in a sweet blend of playful charm and delightful design.",
+    link: "https://chromewebstore.google.com/detail/_________THEME_ID_________",
+    miniature: "themes/FuryRetro/miniature.png",
+    icon: "themes/FuryRetro/icon.png",
+  }
+];
+
+const extensions = [
+  {
+    name: 'Tab Modifier - Take control of your tabs',
+    description: `Take full control of your tabs with our extension:
+
+- Rename tabs for <strong>perfect organization</strong>
+- Customize tab icons for visual navigation
+- Pin important tabs for quick access
+- Group tabs according to your needs for <strong>efficient management</strong>
+- Prevent accidental closure of essential tabs
+- Make each tab <strong>unique</strong> for personalized browsing
+- <strong>Mute noisy tabs</strong> for uninterrupted browsing experience
+- Set your preferences directly from the options page for complete customization.
+
+And don't forget: our extension is open-source! Contribute now on <span class="text-yellow-600">GitHub</span> to enhance your browsing experience.
+
+Take full control of your browsing experience with our extension and discover a new way to manage tabs effectively and tailored to your preferences.`.replace(/\n/g, '<br>'),
+    link: 'https://chromewebstore.google.com/detail/tab-modifier/hcbgadmbdkiilgpifjgcakjehmafcjai',
+    miniature: 'extensions/TabModifier/miniature.png',
+    icon: 'extensions/TabModifier/icon.png',
   },
 ];
 </script>
