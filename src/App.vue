@@ -3,7 +3,7 @@
 
   <h1 class="text-3xl xl:text-5xl font-semibold text-center mt-20 mb-8 xl:mb-20">Fury<span class="text-yellow-500">Bee</span> Web Store</h1>
 
-  <div class="container mx-auto pb-44 p-2 xl:p-0">
+  <div class="container mx-auto p-2 xl:p-0">
     <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 xl:my-20">Explore Our themes</h2>
 
     <div class="grid  lg:grid-cols-3 2xl:grid-cols-4 gap-6">
@@ -11,13 +11,13 @@
     </div>
 
 
-    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 mt-32 xl:my-20">Discover our extensions</h2>
+    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 mt-12 xl:my-20 xl:mt-32">Discover our extensions</h2>
       <div>
         <FuryCard v-for="(extension, index) in extensions" :key="index" :item="extension" mode="row"></FuryCard>
       </div>
   </div>
 
-  <footer class="bg-stone-100 text-center py-4 mt-20">
+  <footer class="bg-stone-100 text-center py-4 mt-8 xl:mt-20">
     <p class="text-sm">
       © {{ (new Date()).getFullYear() }} FuryBee.
       All rights reserved.
@@ -54,25 +54,32 @@ const themes = [
     icon: 'themes/FuryLemonade/icon.png',
   },
   {
+    name: 'FuryCupcake',
+    description: 'Refresh your browsing experience with zesty vibes and sunny design.',
+    link: 'https://chromewebstore.google.com/detail/furycupcake/ckngjhpmfmaceefpidpciedmoglldcom',
+    miniature: 'themes/FuryCupcake/miniature.png',
+    icon: 'themes/FuryCupcake/icon.png',
+  },
+  {
     name: 'FuryValentine',
     description: 'Surround yourself with the warmth of love and romantic charm.',
     link: 'https://chromewebstore.google.com/detail/mckmpfmadoendlbahlmbpnnldekajkbm',
     miniature: 'themes/FuryValentine/miniature.png',
     icon: 'themes/FuryValentine/icon.png',
   },
-  // {
-  //   name: "FuryRetro",
-  //   description: "Indulge in a sweet blend of playful charm and delightful design.",
-  //   link: "https://chromewebstore.google.com/detail/_________THEME_ID_________",
-  //   miniature: "themes/FuryRetro/miniature.png",
-  //   icon: "themes/FuryRetro/icon.png",
-  // }
+  {
+    name: "FuryRetro",
+    description: "Indulge in a sweet blend of playful charm and delightful design.",
+    link: "https://chromewebstore.google.com/detail/furyretro/ijjpklcopmidiplkcmpnfakhmjiokcfg",
+    miniature: "themes/FuryRetro/miniature.png",
+    icon: "themes/FuryRetro/icon.png",
+  }
 ];
 
 const extensions = [
   {
     name: 'Tab Modifier - Take control of your tabs',
-    description: `Take full control of your tabs with our extension:
+    description: `Take full control of your browsing experience with our extension and discover a new way to manage tabs effectively and tailored to your preferences:
 
 - Rename tabs for <strong>perfect organization</strong>
 - Customize tab icons for visual navigation
@@ -83,9 +90,7 @@ const extensions = [
 - <strong>Mute noisy tabs</strong> for uninterrupted browsing experience
 - Set your preferences directly from the options page for complete customization.
 
-And don't forget: our extension is open-source! Contribute now on GitHub to enhance your browsing experience.
-
-Take full control of your browsing experience with our extension and discover a new way to manage tabs effectively and tailored to your preferences.`.replace(/\n/g, '<br>'),
+And don't forget: our extension is <strong>open-source</strong>! Contribute now on GitHub to enhance your browsing experience.`.replace(/\n/g, '<br>'),
     link: 'https://chromewebstore.google.com/detail/tab-modifier/hcbgadmbdkiilgpifjgcakjehmafcjai',
     miniature: 'extensions/TabModifier/miniature.png',
     icon: 'extensions/TabModifier/icon.png',
