@@ -4,14 +4,14 @@
   <h1 class="text-3xl xl:text-5xl font-semibold text-center mt-20 mb-8 xl:mb-20">Fury<span class="text-yellow-500">Bee</span> Web Store</h1>
 
   <div class="container mx-auto p-2 xl:p-0">
-    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 xl:my-20">Explore Our themes</h2>
+    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 xl:my-20">Explore our Themes</h2>
 
     <div class="grid  lg:grid-cols-3 2xl:grid-cols-4 gap-6">
       <FuryCard v-for="(theme, index) in themes" :key="index" :item="theme" mode="col"></FuryCard>
     </div>
 
 
-    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 mt-12 xl:my-20 xl:mt-32">Discover our extensions</h2>
+    <h2 class="text-2xl xl:text-4xl font-semibold text-center my-8 mt-12 xl:my-20 xl:mt-32">Discover our Extensions</h2>
       <div>
         <FuryCard v-for="(extension, index) in extensions" :key="index" :item="extension" mode="row"></FuryCard>
       </div>
@@ -55,7 +55,7 @@ const themes = [
   },
   {
     name: 'FuryCupcake',
-    description: 'Refresh your browsing experience with zesty vibes and sunny design.',
+    description: 'Indulge in a sweet blend of playful charm and delightful design.',
     link: 'https://chromewebstore.google.com/detail/furycupcake/ckngjhpmfmaceefpidpciedmoglldcom',
     miniature: 'themes/FuryCupcake/miniature.png',
     icon: 'themes/FuryCupcake/icon.png',
@@ -69,7 +69,7 @@ const themes = [
   },
   {
     name: "FuryRetro",
-    description: "Indulge in a sweet blend of playful charm and delightful design.",
+    description: "Relive the charm of the past with a touch of vintage elegance.",
     link: "https://chromewebstore.google.com/detail/furyretro/ijjpklcopmidiplkcmpnfakhmjiokcfg",
     miniature: "themes/FuryRetro/miniature.png",
     icon: "themes/FuryRetro/icon.png",
